@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: #111;
+}
+
+.container .dropdown-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-out;
+}
+
+.container .dropdown-btn.width {
+    width: 300px;
+}
+
+.dropdown-btn h4 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.dropdown-btn i {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+.dropdown-btn i.rotate {
+    transform: rotate(180deg);
+}
+
+
+/* Drop Menu */
+
+.container .drop-menu {
+    display: flex;
+    width: 300px;
+    height: fit-content;
+    background: #222;
+    padding: 20px 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.1s ease;
+    /* display: none; */
+    opacity: 0;
+}
+
+/* 
+.container .drop-menu::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #222;
+    position: absolute;
+    top: 255px;
+    right: 639px;
+    rotate: 45deg;
+} */
+
+.container .drop-menu.show {
+    /* display: block; */
+    opacity: 1;
+}
+
+
+.drop-menu ul {
+    list-style: none;
+    width: 100%;
+    /* transition: 0.2s ease; */
+}
+
+.drop-menu ul li {
+    border-radius: 5px;
+    padding: 10px 10px;
+    transition: 0.4s ease;
+}
+
+.drop-menu ul li:hover {
+    background: #333;
+}
+
+.drop-menu ul li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.drop-menu ul li a div {
+    display: flex;
+    align-items: center;
+}
+
+.drop-menu ul li a i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.drop-menu ul li a .bx-chevron-right {
+    margin-right: 0;
+}
+
+.drop-menu .setting-list,
+.drop-menu .help-list {
+    transition: 0.4s ease;
+
+    display: none;
+}
+
+.drop-menu .setting-list.show-setting {
+    transition: 0.4s ease;
+    display: block;
+} 
+
+.drop-menu .help-list.show-help {
+    transition: 0.4s ease;
+    display: block;
+} 
+
+.bx-chevron-left {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: 0.3s ease-out;
+}
+
+.bx-chevron-left:hover {
+    background-color: #333;
+}
